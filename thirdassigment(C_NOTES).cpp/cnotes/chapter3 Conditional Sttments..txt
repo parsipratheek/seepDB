@@ -1,0 +1,129 @@
+CHAPTER 3. CONDITIONAL STATEMENTS: 
+ It allow programs to make decisions based on conditions. They control the flow of execution, enabling different code blocks to run depending on whether a condition is true or false.  
+There are two types of conditional statements: •if,•if else,•else if,•switch
+
+
+1.♦if condition: It is the simplest decision-making statement. It is used to decide whether a certain statement or block of statements will be executed or not i.e if a certain condition is true then a block of statements is executed otherwise not.     */
+//Example: 
+int i = 10;
+    if (i < 18) {
+        printf("Eligible for vote"); //if i<10 code will not generate 
+    }
+
+
+2.♦if else condition: It tells us that if a condition is true, it will execute a block of statements and if the condition is false, it won’t. But what if we want to do something else when the condition is false? Here comes the C elsestatement.
+We can use the elsestatement with the ifstatement to execute a block of code when the condition is false. The if-else statement consists of two blocks, one for false expression and one for true expression.
+SNYTAX:
+if(Condition) {
+//do something if TRUE
+}
+else {
+//do something if FALSE
+}
+
+EXAMPLE:
+int marks;
+printf("enter your marks:");
+scanf("%d",&marks);
+if(marks>18){
+  printf("pass \n");          // BLOCK: A sequence of declarations, definitions, and statements enclosed within curly braces ({ }).
+  printf("they can promote \n");
+}
+else {
+  printf("fail \n");
+}
+printf("Thankyou\n");  //this thankyou will print everytime if the age is <18 or >18
+
+
+3.♦ else if condition: It is a conditional statement used to test multiple conditions sequentially. It is an extension of the if statement and is often used in conjunction with the else statement to handle different scenarios   
+SYNTAX:
+if(Condition 1) {
+//do something if TRUE
+}
+else if (Condition 2) {
+//do something if 1st is FALSE & 2nd is TRUE 
+}                                              
+else {
+//do something if FALSE
+}
+
+EXAMPLE:
+int age2;
+printf("enter your age:");
+scanf("%d",&age2);
+
+if(age2>18){
+  printf("adult\n");
+}
+else if(age2>13 && age2 <=18){
+  printf("teenager");
+}
+else{
+  printf("child");
+}
+
+In the chapter 2 conditional insturutions in that opertaors (line 115,117)
+-→f.TERNARY OPERATORS: It is similar to the if-else statement as it follows the same algorithm as of if-else statement but the ternary operator takes less space and helps to write the if-else statements in the shortest way possible 
+SYNTAX: Condition ? doSomething if TRUE : doSomething;   (first we should add a condition '?' will check that it is true or not if it is false ':' will take that statment)
+
+EXAMPLE:
+int age3;
+printf("enter your age3");
+scanf("%d",&age3);
+age3>=18 ? printf("adult\n") : printf("not adult\n");
+
+
+4.♦ swtich condition: It provides an efficient way to transfer the execution to different parts of a code based on the value of the expression.               
+SYNTAX:
+switch(number) {          
+case C1: //do something    
+break;
+case C2 : //do something
+break;
+default : //do something    (default is nothing but else condition and case 1,2.. is if ans if else condition, and you must keep break after cases)
+}
+
+EXAMPLE:
+int day; //1-monday,2-tuesday,...
+printf("enter day(1-7) :");
+scanf("%d",&day);
+switch (day){
+  case 1 : printf("monday \n");
+   break;
+  case 2 : printf("tuesday \n");
+   break;
+  case 3 : printf("wednesday \n");
+   break;
+  case 4 : printf("thursday \n");
+   break;
+  case 5 : printf("friday \n");
+   break;
+  case 6 : printf("saturday \n");
+   break;
+  case 7 : printf("sunday \n");
+   break;
+  default : printf("not a day");
+}
+
+
+switch Properties : a. Cases can be in any order , b. Nested switch (switch inside switch) are allowed 
+ Nested switch EXAMPLE :
+int number2;
+printf("enter number2 :");
+scanf("%d" ,&number2);
+
+if (number2>=0){
+ printf("positive \n");
+ if(number2 % 2 == 0){
+    printf("even \n");
+  } else {
+    printf("odd \n");
+  }
+}else {
+ printf("negative \n");     
+ if(number2 % 2 == 0){
+    printf("even \n");
+  } else {
+    printf("odd \n");
+  }  
+}
