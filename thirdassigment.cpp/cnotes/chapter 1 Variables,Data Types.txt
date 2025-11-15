@@ -1,0 +1,42 @@
+CHAPTER 1.VARIABLES DATA TYPES + INPUT/OUTPT: 
+Variable is the name of a memory location which stores some data. 
+EX:If i have 3 shoes that are kept in separate container/boxes these container are called as Variables.And the collection of containers are called DATA.(inside the container we have data and container called as Variable )
+
+
+SOME RULES FOR VARIABLES: 
+1. Variables are case sensitive means 
+int:
+#include<stdio.h>
+int main(){}
+ int age1 =18;
+   printf("1.your age is %d\n",age1);  //printf gives output and inside the double quote " " that is called 'string',and %d is called as 'format specifier'.
+
+
+ int number;
+  printf("enter a number:");  
+  scanf("%d",&number); // & is a address of a variable (number)   
+  printf("2.your number is: %d\n",number); 
+
+
+ int a,b;
+  printf("enter a:");
+  scanf("%d",&a);
+
+  printf("enter b:");
+  scanf("%d",&b);
+
+  int sum=a+b;
+  printf("3.sum is: %d\n",sum);
+
+
+COMPILATION OR COMPILER:
+A computer program that translates C code into machine code and computers dont understand c or c++ or java etc. computers only understand 0 or 1 ie. high or low voltage
+This compiler is two step process first a flie (in this basic.c) is sent to c compiler; this compiler will check the code that there are errors there or not if there is no error this compiler will convert to a.exe(in this basic.exe) file  
+
+Examples:
+ 1.Area of a square 
+ int side;
+  printf("enter side :");
+  scanf("%d",&side);
+
+  printf("4.area of a square is : %d\n", side*side);

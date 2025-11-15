@@ -1,0 +1,102 @@
+CHAPTER 2. Instructions & OPERATORS:
+
+•INSTRUCTIONS: 
+These are statements(sequence) in a Program. There are 3 types of Instructions : 1.Type Declaration 2.Arithmetic 3.Control Instructions.
+
+1.♦TYPE DECLARATION: Defining a varable with its type. If you are useing a varable declare the varable before you use 
+ EXAMPLE:
+ int a = 22;
+ int b = a;
+ int c = b + 1;
+ int d = 1, e;
+
+ int a,b,c;                                 int a,b,c = 1;  (This is wrong because here we are not declaring the varable)
+ a = b = c = 1;  (This is correct) 
+
+2.♦ARITHMETIC INSTRUCTION : These used to perform arithmetic/mathematical operations on operands.
+ EX: a + b here a,b or any letter are called Operand and +(or -,*,/,%) is called Operator.
+ There should be single varable on LHS(varable=a+b*c/d here RHS will go to LHS) 
+  EX:int x=a*b (this is correct) 
+
+
+▬▬ MODULAR OPERATOR: modulo division operator produces the remainder of an integer division. 
+     int x,y=a*b (this is wrong because a*b is declared in y but not in x)
+ #include<math.h>
+  printf("%d\n",7 % 3); (3*2=6;7-6=1)
+   return 0;
+ } 
+
+
+▬▬ TYPE CONVERSION:There are two types 1.Implicit Conversion (automatically),2.Explicit Conversion (manually) 
+EX: 1. float myFloat = 9;
+ →1.Implicit Conversion: It is done automatically by the compiler when you assign a value of one type to another.
+        printf("%f", myFloat); //(ans) 9.000000
+    2. int myInt = 9.99;
+        printf("%d", myInt); // 9
+        EX: 1. // Manual conversion: int to float
+ →2.Explicit Conversion: It is done manually by placing the type in parentheses () in front of the value.
+      float sum = (float) 5 / 2;
+        printf("%f", sum); // 2.500000
+    2. int num1 = 5;
+       int num2 = 2;
+      float sum = (float) num1 / num2;
+        printf("%f", sum); // 2.500000 
+
+
+▬▬ OPERATOR PRECEDENCE: It is used when two operators of the same precedence appear in an expression.
+  (i)First give high precedence to *,/,%
+  (ii)Then give precedence to +,-
+  (iii)after completing i,ii give precedence to = ('=' also called as assignment)
+  EXAMPLE: X=4+9*10  Ans:94
+  ◘ASSOCIATIVITY RULE: It is basically for same precedence we should cal from left to right
+  EXAMPLE:4*3/6*2   ANS: 4 (4*3=12;12/6=2;2*2=4)
+
+
+3.♦CONTROL INSTRUCTIONS:They help decide whether a block of code should run, repeat, or skip. These statements make programs dynamic by adding decision-making, looping, and jumping capabilities, which are essential for solving real-world problems.or they are Used to determine flow of program.a
+  There are four types: a. Sequence Control, b. Decision Control, c. Loop Control ,d. Case Control. (we will talk about this later)
+
+
+◘◘OPERATORS: These are the symbols that perform operations on operands.There are 6 types: a.Arithmetic Operators b.Relational Operators c.Logical Operators d.Bitwise Operators e.Assignment Operators f.Ternary Operator
+-→RELATION OPERATORS:This is a operation which gives relation b/w two operands, The result that we get after the relational operation is a boolean value(that tells whether the comparison is true or false).[Relational operators are mainly used in conditional statements and loops to check the conditions in C]
+•If the condition is true it gives 1,and if it is false it will give 0.
+ ►We have 6 types of Relational Operators: '==' ( Equal to); '>'(Greater than);'>='(Greater than or equal to); '<'(Less than);'<='(Less than or equal to) ; '!='(Not equal to)
+  EXAMPLES: i.2==2  output is 1, 2==3 output is 0.
+-→LOGICAL OPERATORS:These are used to combine multiple conditions.In c we use for decision making. 
+  ►We have 3 types of logical operators: '&&'(AND); '||'(OR); '!'(NOT)
+    •Logical AND Operator(&&):It returns true only if both operands are equal Otherwise, it returns false (0). Ex: 4>3 && 5>2 then output gives 1; if 3>3 && 5>2 output gives 0;
+     ▬ TRUTH TABLE OF AND: X Y  X&&Y 
+                           1 1   1
+                           1 0   0
+                           0 1   0
+                           0 0   0 
+    •Logical OR Operator(||):If one of the statment is true and another is false then output gives true.{orelse we can say that it returns true if any one of the operands is non-zero. Otherwise, it returns false}. Ex: 3>4 || 5>2 output is 1
+     ▬ TRUTH TABLE OF OR: X Y  X||Y 
+                           1 1   1
+                           1 0   1
+                           0 1   1
+                           0 0   0 
+    •Logical NOT Operator(!):If the statment is true it will give false,and if the statment is false it will give true.(vice-versa) Ex: !(3>4) output is 1; !(5>2) output is 0 ; !( (5>2) && (3>4) ) output is 1
+     ▬ TRUTH TABLE OF NOT:  X  !X     
+                            0   1                            
+                            1   0
+
+☼ OPERATOR PRECEDENCE: 
+Priority   Operator
+  1         !
+  2         *, /, %
+  3         +, -
+  4         <, <=, >, >=
+  5         ==, !=
+  6         &&
+  7         ||
+  8         =
+
+
+-→ASSIGNMENT OPERATORS:These are used to assign values to variables  The left operand is the variable and the right operand is the value being assigned. The value on the right must match the data type of the variable otherwise, the compiler will raise an error.
+  ► The most commonly used compound assignment operators:=,+=,-=,*=,/=,%=    Ex: int a=1; int b=2; a=a+b or a +=b  output is 3.
+
+Example: WRITE A PROGRAM TO CHECK IF A NUMBER IS DIVISIBLE WITH 2 OR NOT 
+int x;
+printf("enter a number :");
+scanf("%d",&x);
+printf("%d", x % 2 == 0); //if the number is divisible with 2 output gives 1 if not 0; even→1,odd→0
