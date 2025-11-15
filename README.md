@@ -1,7 +1,7 @@
-#BASIC C++ PROJECTS 
+BASIC C++ PROJECTS 
 
-#PROJECT NAMES:
--File Store Retrieve
--File Handling 
--C Notes 
--Flames
+PROJECT NAMES:
+-[File Store Retrieve](#File_Store_Retrieve).
+-[File Handling] 
+-[C Notes] 
+-[Flames]
