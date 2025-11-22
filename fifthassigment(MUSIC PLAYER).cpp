@@ -1,11 +1,3 @@
-/*if you run code first t should show
--first it will ask which language do you want (telugu,hindi,english)
--if he enters telugu telugu playlist songs should show same to hindi and english also
--then it will show some artist names
--and it will show that artist songs as list
--if i enter first one the url link of that song will come and lyrics will also come
-
-*/
 #include <iostream>
 #include <string>
 using namespace std;
@@ -98,4 +90,5 @@ int main()
     }
 
     return 0;
+
 }
