@@ -1,6 +1,24 @@
 #include <iostream>
 #include <string>
+#include <windows.h>
 using namespace std;
+
+void slowPrint(string text, int delay = 60)
+{
+    for (char c : text)
+    {
+        cout << c;
+        Sleep(delay);
+    }
+    cout << endl;
+}
+
+void slowPrintLine(string text, int delay = 1000)
+{
+    cout << text;
+    Sleep(delay);
+    cout << endl;
+}
 
 void showTeluguPlaylist()
 {
@@ -50,6 +68,31 @@ int main()
         cout << "Here Is Your Link";
         if (n == 1)
             cout << "https://youtu.be/YN6VmFiTLrw?si=XxMuKrLHW6LRdP--";
+            slowPrintLine("\nLyrics:\n", 1000);
+            slowPrint("Emitemitemo Em Avtunnadhoo", 80);
+            slowPrint("Etavaalu Daarilo Jaaredhi Dekkadikoo", 80);
+            slowPrint("Emitemitemo Em Kaanunnadho", 80);
+            slowPrint("Erulaanti Vayasuloo Chere Dethatiko", 80);
+            slowPrint("Telusaa..Telusaa..Nekainaa", 80);
+            slowPrint("Telusa..Telusaa..Mari..Nakainaa", 80);
+            slowPrint("Ayinaa..Adugulu Aagenaa", 80);
+            slowPrint("Veladham..Edemainaa", 80);
+            slowPrint("Eduruga Nuvu Nilabadu nimushaana", 80);
+            slowPrint("Edigina Prathi Kshanamunu Marichaanaa", 80);
+            slowPrint("Tholi Tharagathi Thalupulu Therichaanaa", 80);
+            slowPrint("Nijamaa…Nijamaaaaa", 80);
+            slowPrint("Nee Raakathoo.. Naa Raathaloo", 80);
+            slowPrint("Okkarojulone Enenni Marayalaa", 80);
+            slowPrint("Aa Ningine Naa Lekhagaa", 80);
+            slowPrint("Marchukunna Chaladhemo Avanni nen Rayalante", 80);
+            slowPrint("Chebuthaaaa.. Anni Nee Thonaaa", 80);
+            slowPrint("Chebuthaaa… Roju Mari Rathrainaaa", 80);
+            slowPrint("Ayinaa… Kaburulu..Mugisenaa", 80);
+            slowPrint("Kalalo..malli raanaaa", 80);
+            slowPrint("Eduruga Nuvu Nilabadu nimushaana", 80);
+            slowPrint("Edigina Prathi Kshanamunu Marichaanaa", 80);
+            slowPrint("Tholi Tharagathi Thalupulu Therichaanaa", 80);
+            slowPrint("Nijamaa…Nijamaaaaa", 80);
         else if (n == 2)
             cout << "https://youtu.be/pb1NL71uFBs?si=MuBJTvqFVyThtAlh";
         else if (n == 3)
@@ -92,3 +135,4 @@ int main()
     return 0;
 
 }
+
